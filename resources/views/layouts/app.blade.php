@@ -17,16 +17,38 @@
 			}
 		});
 	</script>
+	<!-- Tambahkan SweetAlert2 CDN di dalam <head> -->
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
+    {{-- <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}"> --}}
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="{{ asset('assets/css/atlantis2.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/demo.css') }}">
 
     
 </head>
 <body>
-	<div class="wrapper horizontal-layout-2">
-		
+			<div class="wrapper horizontal-layout-2">
+				@if (session('success'))
+			<script>
+				Swal.fire({
+					icon: 'success',
+					title: 'Success',
+					text: '{{ session('success') }}',
+				});
+			</script>
+		@endif
+
+		@if (session('error'))
+			<script>
+				Swal.fire({
+					icon: 'error',
+					title: 'Oops...',
+					text: '{{ session('error') }}',
+				});
+			</script>
+		@endif
+
 		<div class="main-header" data-background-color="light-blue2">
 			<div class="nav-top">
 				<div class="container d-flex flex-row">
@@ -47,16 +69,6 @@
 
 						<div class="container-fluid p-0">
 							<div class="collapse" id="search-nav">
-								{{-- <form class="navbar-left navbar-form nav-search ml-md-3">
-									<div class="input-group">
-										<div class="input-group-prepend">
-											<button type="submit" class="btn btn-search pr-1">
-												<i class="fa fa-search search-icon"></i>
-											</button>
-										</div>
-										<input type="text" placeholder="Search ..." class="form-control">
-									</div>
-								</form> --}}
 							</div>
 							<ul class="navbar-nav topbar-nav ml-md-auto align-items-center">
 								<li class="nav-item toggle-nav-search hidden-caret">
@@ -119,37 +131,37 @@
 							<div class="navbar-dropdown animated fadeIn">
 								<ul>
 									<li>
-										{{-- <a href="{{ route('category.index') }}">Kategori</a> --}}
+										<a href="{{ route('category.index') }}">Kategori</a>
 									</li>
 									<li>
-										{{-- <a href="{{ route('product.index') }}">Produk</a> --}}
+										<a href="{{ route('product.index') }}">Produk</a>
+									</li>
+									{{-- <li>
+										<a href="{{ route('card.index') }}">Kartu Kredit</a>
 									</li>
 									<li>
-										{{-- <a href="{{ route('card.index') }}">Kartu Kredit</a> --}}
-									</li>
-									<li>
-										{{-- <a href="{{ route('tax.index') }}">Pajak</a> --}}
-									</li>
+										<a href="{{ route('tax.index') }}">Pajak</a>
+									</li> --}}
 								</ul>
 							</div>
 						</li>
                         <li class="nav-item">
-							{{-- <a class="nav-link" href="{{ route('order.index') }}">
-								<i class="link-icon icon-pie-chart"></i>
+							<a class="nav-link" href="{{ route('order.index') }}">
+								<i class="link-icon flaticon-graph"></i>
 								<span class="menu-title">Penjualan</span>
-							</a> --}}
+							</a>
 						</li>
 						<li class="nav-item">
-							{{-- <a class="nav-link" href="{{ route('report.index') }}">
-								<i class="link-icon icon-pie-chart"></i>
+							<a class="nav-link" href="{{ route('report.index') }}">
+								<i class="link-icon flaticon-presentation"></i>
 								<span class="menu-title">Laporan</span>
-							</a> --}}
+							</a>
 						</li>
 						<li class="nav-item">
-							{{-- <a class="nav-link" href="{{ route('setting.index') }}">
-								<i class="link-icon icon-pie-chart"></i>
+							<a class="nav-link" href="{{ route('setting.index') }}">
+								<i class="link-icon flaticon-settings"></i>
 								<span class="menu-title">Pengaturan</span>
-							</a> --}}
+							</a>
 						</li>
 					</ul>
 				</div>
@@ -168,9 +180,13 @@
 		</footer>
 	</div>
 	<!--   Core JS Files   -->
-    <script src="{{ asset('assets/js/core/jquery.3.2.1.min.js') }}"></script>
-	<script src="{{ asset('assets/js/core/popper.min.js') }}"></script>
-	<script src="{{ asset('assets/js/core/bootstrap.min.js') }}"></script>
+	<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+	{{-- <script src="{{ asset('assets/js/core/jquery.3.2.1.min.js') }}"></script> --}}
+	{{-- <script src="{{ asset('assets/js/core/popper.min.js') }}"></script> --}}
+	{{-- <script src="{{ asset('assets/js/core/bootstrap.min.js') }}"></script> --}}
+	
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
 	<script src="{{ asset('assets/js/plugin/jquery-ui-1.12.1.custom/jquery-ui.min.js') }}"></script>
 	<script src="{{ asset('assets/js/plugin/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js') }}"></script>
 	<script src="{{ asset('assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js') }}"></script>

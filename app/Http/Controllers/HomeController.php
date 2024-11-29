@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Cart;
+use App\Models\Order;
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,6 +26,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $data['products'] = Product::all() ?? 0;
+        $data['orders']   = Order::all() ?? 0;
+        $data['total']    = Order::where('created_at', 'LIKE', '%'. date('Y-m-d') .'%')->sum('total');
+        $data['carts']    = Cart::where('created_at', 'LIKE', '%'. date('Y-m-d') .'%')->sum('qty');
+        return view('home', compact('data'));
     }
 }

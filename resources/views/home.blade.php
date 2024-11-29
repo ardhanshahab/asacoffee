@@ -8,11 +8,12 @@
                 <div class="col-sm-6 col-lg-3">
                     <div class="card p-3">
                         <div class="d-flex align-items-center">
-                            <span class="stamp stamp-md bg-secondary mr-3">
+                            <span class="stamp stamp-md bg-secondary mx-1">
                                 <i class="fa fa-box"></i>
                             </span>
-                            <div>
-                                {{-- <h5 class="mb-1"><b><a href="#">{{ count($products) }}</a></b></h5> --}}
+                            <div class="d-flex">
+                                {{-- <h4 class="mx-1 text-decorative-none"><b><a href="#">{{ count($products) }}</a></b></h4> --}}
+                                <h4 class="mx-1 text-decorative-none"><b><a href="#" class="text-decoration-none">0</a></b></h4>
                                 <small class="text-muted">Produk</small>
                             </div>
                         </div>
@@ -21,11 +22,12 @@
                 <div class="col-sm-6 col-lg-3">
                     <div class="card p-3">
                         <div class="d-flex align-items-center">
-                            <span class="stamp stamp-md bg-success mr-3">
+                            <span class="stamp stamp-md bg-success mx-1">
                                 <i class="fa fa-shopping-cart"></i>
                             </span>
-                            <div>
-                                {{-- <h5 class="mb-1"><b><a href="#">{{ count($orders) }}</a></b></h5> --}}
+                            <div class="d-flex">
+                                {{-- <h4 class="mx-1 text-decorative-none"><b><a href="#">{{ count($orders) }}</a></b></h4> --}}
+                                <h4 class="mx-1 text-decorative-none"><b><a href="#" class="text-decoration-none">0</a></b></h4>
                                 <small class="text-muted">Order</small>
                             </div>
                         </div>
@@ -34,11 +36,12 @@
                 <div class="col-sm-6 col-lg-3">
                     <div class="card p-3">
                         <div class="d-flex align-items-center">
-                            <span class="stamp stamp-md bg-danger mr-3">
+                            <span class="stamp stamp-md bg-danger mx-1">
                                 <i class="fas fa-shopping-basket"></i>
                             </span>
-                            <div>
-                                {{-- <h5 class="mb-1"><b><a href="#">@currency($total)</a></b></h5> --}}
+                            <div class="d-flex">
+                                {{-- <h4 class="mx-1 text-decorative-none"><b><a href="#">@currency($total)</a></b></h4> --}}
+                                <h4 class="mx-1 text-decorative-none"><b><a href="#" class="text-decoration-none">0</a></b></h4>
                                 <small class="text-muted">Penjualan hari ini</small>
                             </div>
                         </div>
@@ -47,11 +50,12 @@
                 <div class="col-sm-6 col-lg-3">
                     <div class="card p-3">
                         <div class="d-flex align-items-center">
-                            <span class="stamp stamp-md bg-warning mr-3">
+                            <span class="stamp stamp-md bg-warning mx-1">
                                 <i class="fas fa-cart-arrow-down"></i>
                             </span>
-                            <div>
-                                {{-- <h5 class="mb-1"><b><a href="#">{{ $carts }}</a></b></h5> --}}
+                            <div class="d-flex">
+                                {{-- <h4 class="mx-1 text-decorative-none"><b><a href="#">{{ $carts }}</a></b></h4> --}}
+                                <h4 class="mx-1 text-decorative-none"><b><a href="#" class="text-decoration-none">0</a></b></h4>
                                 <small class="text-muted">Produk terjual hari ini</small>
                             </div>
                         </div>
