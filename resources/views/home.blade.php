@@ -12,8 +12,8 @@
                                 <i class="fa fa-box"></i>
                             </span>
                             <div class="d-flex">
-                                {{-- <h4 class="mx-1 text-decorative-none"><b><a href="#">{{ count($products) }}</a></b></h4> --}}
-                                <h4 class="mx-1 text-decorative-none"><b><a href="#" class="text-decoration-none">0</a></b></h4>
+                                <h4 class="mx-1 text-decorative-none"><b><a href="#">{{ count($products) }}</a></b></h4>
+                                {{-- <h4 class="mx-1 text-decorative-none"><b><a href="#" class="text-decoration-none">0</a></b></h4> --}}
                                 <small class="text-muted">Produk</small>
                             </div>
                         </div>
@@ -26,8 +26,8 @@
                                 <i class="fa fa-shopping-cart"></i>
                             </span>
                             <div class="d-flex">
-                                {{-- <h4 class="mx-1 text-decorative-none"><b><a href="#">{{ count($orders) }}</a></b></h4> --}}
-                                <h4 class="mx-1 text-decorative-none"><b><a href="#" class="text-decoration-none">0</a></b></h4>
+                                <h4 class="mx-1 text-decorative-none"><b><a href="#">{{ count($orders) }}</a></b></h4>
+                                {{-- <h4 class="mx-1 text-decorative-none"><b><a href="#" class="text-decoration-none">0</a></b></h4> --}}
                                 <small class="text-muted">Order</small>
                             </div>
                         </div>
@@ -40,8 +40,8 @@
                                 <i class="fas fa-shopping-basket"></i>
                             </span>
                             <div class="d-flex">
-                                {{-- <h4 class="mx-1 text-decorative-none"><b><a href="#">@currency($total)</a></b></h4> --}}
-                                <h4 class="mx-1 text-decorative-none"><b><a href="#" class="text-decoration-none">0</a></b></h4>
+                                <h4 class="mx-1 text-decorative-none"><b><a href="#">@currency($total)</a></b></h4>
+                                {{-- <h4 class="mx-1 text-decorative-none"><b><a href="#" class="text-decoration-none">0</a></b></h4> --}}
                                 <small class="text-muted">Penjualan hari ini</small>
                             </div>
                         </div>
@@ -54,8 +54,8 @@
                                 <i class="fas fa-cart-arrow-down"></i>
                             </span>
                             <div class="d-flex">
-                                {{-- <h4 class="mx-1 text-decorative-none"><b><a href="#">{{ $carts }}</a></b></h4> --}}
-                                <h4 class="mx-1 text-decorative-none"><b><a href="#" class="text-decoration-none">0</a></b></h4>
+                                <h4 class="mx-1 text-decorative-none"><b><a href="#">{{ $carts }}</a></b></h4>
+                                {{-- <h4 class="mx-1 text-decorative-none"><b><a href="#" class="text-decoration-none">0</a></b></h4> --}}
                                 <small class="text-muted">Produk terjual hari ini</small>
                             </div>
                         </div>

@@ -30,6 +30,6 @@ class HomeController extends Controller
         $data['orders']   = Order::all() ?? 0;
         $data['total']    = Order::where('created_at', 'LIKE', '%'. date('Y-m-d') .'%')->sum('total');
         $data['carts']    = Cart::where('created_at', 'LIKE', '%'. date('Y-m-d') .'%')->sum('qty');
-        return view('home', compact('data'));
+        return view('home', $data);
     }
 }
