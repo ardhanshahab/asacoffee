@@ -77,7 +77,7 @@
 									</a>
 								</li>
 								<li class="nav-item dropdown hidden-caret">
-									<a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#" aria-expanded="false">
+									<a class="dropdown-toggle profile-pic" data-bs-toggle="dropdown" href="#" aria-expanded="false">
 										<div class="avatar-sm">
 											<img src="{{ asset('assets/img/setting/logo.png') }}" alt="..." class="avatar-img rounded-circle">
 										</div>
@@ -157,12 +157,12 @@
 								<span class="menu-title">Laporan</span>
 							</a>
 						</li>
-						<li class="nav-item">
+						{{-- <li class="nav-item">
 							<a class="nav-link" href="{{ route('setting.index') }}">
 								<i class="link-icon flaticon-settings"></i>
 								<span class="menu-title">Pengaturan</span>
 							</a>
-						</li>
+						</li> --}}
 					</ul>
 				</div>
 			</div>

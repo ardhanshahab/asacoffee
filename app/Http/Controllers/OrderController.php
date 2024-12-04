@@ -73,7 +73,7 @@ class OrderController extends Controller
         $data['setting'] = Setting::find(1);
         $data['order'] = Order::where('invoice', $inv)->first();
         $customPaper = array(0,0,350,250.80);
- 
+        // return view('order.print', $data);
     	$pdf = PDF::loadview('order.print',$data)->setPaper($customPaper, 'landscape');
     	return $pdf->stream();
     }

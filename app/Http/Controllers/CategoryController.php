@@ -83,8 +83,7 @@ class CategoryController extends Controller
         $category = Category::find($id);
         $category->update($request->all());
 
-        alert()->success('Data berhasil diubah' , 'Success');
-        return redirect('category');
+        return redirect()->route('category.index')->with('success', 'Category updated successfully!');
     }
     /**
      * Remove the specified resource from storage.

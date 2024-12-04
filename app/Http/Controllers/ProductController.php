@@ -103,8 +103,8 @@ class ProductController extends Controller
         
         $product->update($input);
 
-        alert()->success('Data berhasil diubah' , 'Success');
-        return redirect('product');
+        return redirect()->route('product.index')->with('success', 'Data berhasil ditambahkan!');
+
     }
 
     /**

@@ -33,9 +33,10 @@
                 $subtotal = 0; 
                 $diskon = 0; 
             ?>
+            
             @foreach($listcart as $row)
             <tr>
-                <td>{{ $row->qty }} x Nasi goreng</td>
+                <td>{{ $row->qty }} x {{$row->name_product}}</td>
                 <td align="right">@currency($row->price)</td>
             </tr>
             <?php 
